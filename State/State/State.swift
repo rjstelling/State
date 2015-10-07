@@ -21,7 +21,7 @@ public class State<P:StateDelegate> {
     
     private unowned let delegate:P
     
-    private let version = StateVersionNumber
+    public let version = StateVersionNumber
     
     // MARK: Locking
 
