@@ -1,6 +1,6 @@
 //
 //  State.swift
-//  SSESwift
+//  State
 //
 //  Created by Richard Stelling on 05/10/2015.
 //  Copyright © 2015 Naim Audio Ltd. All rights reserved.
@@ -21,9 +21,11 @@ public class State<P:StateDelegate> {
     
     private unowned let delegate:P
     
+    private let version = StateVersionNumber
+    
     // MARK: Locking
 
-    let lockingQueueName : String = "State.Locking.queue"
+    let lockingQueueName : String = "State.Locking.Queue"
     
     let queue : dispatch_queue_t
     
