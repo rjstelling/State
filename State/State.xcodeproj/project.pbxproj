@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		2AB144441BC4090C00D1071B /* State.h in Headers */ = {isa = PBXBuildFile; fileRef = 2AB144431BC4090C00D1071B /* State.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2AB1444B1BC4090C00D1071B /* State.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AB144401BC4090C00D1071B /* State.framework */; settings = {ASSET_TAGS = (); }; };
+		2AB1444B1BC4090C00D1071B /* State.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AB144401BC4090C00D1071B /* State.framework */; };
 		2AB144501BC4090C00D1071B /* StateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB1444F1BC4090C00D1071B /* StateTests.swift */; };
-		2AB1445B1BC40A2900D1071B /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB1445A1BC40A2900D1071B /* State.swift */; settings = {ASSET_TAGS = (); }; };
+		2AB1445B1BC40A2900D1071B /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB1445A1BC40A2900D1071B /* State.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -151,7 +151,6 @@
 				TargetAttributes = {
 					2AB1443F1BC4090C00D1071B = {
 						CreatedOnToolsVersion = 7.0.1;
-						DevelopmentTeam = 67BU7Q9MHN;
 					};
 					2AB144491BC4090C00D1071B = {
 						CreatedOnToolsVersion = 7.0.1;
@@ -386,6 +385,7 @@
 				2AB144561BC4090C00D1071B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2AB144571BC4090C00D1071B /* Build configuration list for PBXNativeTarget "StateTests" */ = {
 			isa = XCConfigurationList;
@@ -394,6 +394,7 @@
 				2AB144591BC4090C00D1071B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
