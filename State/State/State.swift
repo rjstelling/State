@@ -17,6 +17,7 @@ public protocol StateDelegate : class {
     func failedTransitionFrom(from:StateType, to:StateType)
 }
 
+@available(iOS 9, OSX 10.11, *)
 public class State<P:StateDelegate> {
     
     private unowned let delegate:P
