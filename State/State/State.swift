@@ -26,8 +26,6 @@ public class State<P:StateDelegate> {
     
     private unowned let delegate:P
     
-    public let version = StateVersionNumber
-    
     // MARK: Locking
 
     let lockingQueueName : String = "State.Locking.Queue"
@@ -75,5 +73,15 @@ public class State<P:StateDelegate> {
         _state = initialState //set the primitive to avoid calling the delegate.
         
         self.queue = dispatch_queue_create(lockingQueueName, nil)
+    }
+}
+
+extension State {
+    
+    //MARK: Versions
+    public class var version : String {
+        get {
+            return "v\(StateVersionNumber)"
+        }
     }
 }
