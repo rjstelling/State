@@ -189,4 +189,11 @@ class StateTests: XCTestCase {
             }
         }
     }
+    
+    func testVersionString() {
+        
+        let version = State<Mock>.version
+        
+        XCTAssertTrue(version.characters.count > 1, "Version string is invalid")
+    }
 }
