@@ -10,7 +10,11 @@ import Foundation
 
 public protocol StateDelegate : class {
     
+#if swift(>=2.2)
+    associatedtype StateType
+#else
     typealias StateType
+#endif
     
     func shouldTransitionFrom(from:StateType, to:StateType) -> Bool
     func didTransitionFrom(from:StateType, to:StateType)
@@ -66,7 +70,7 @@ public class State<P:StateDelegate> {
     // MARK: Init
     
     public init(initialState:P.StateType, delegate:P) {
-        
+                
         self.delegate = delegate
         _state = initialState //set the primitive to avoid calling the delegate.
         
