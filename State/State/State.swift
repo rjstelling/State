@@ -41,7 +41,9 @@ public class State<P:StateDelegate> {
     private var _state : P.StateType! {
         
         didSet {
-            self.delegate.didTransitionFrom(oldValue, to: self._state)
+            dispatch_sync(dispatch_get_main_queue()) {
+                self.delegate.didTransitionFrom(oldValue, to: self._state)
+            }
         }
     }
     
@@ -58,7 +60,7 @@ public class State<P:StateDelegate> {
                 }
             }
             else {
-                self.synchronise {
+                dispatch_sync(dispatch_get_main_queue()) {
                     self.delegate.failedTransitionFrom(self._state, to: newValue)
                 }
             }
