@@ -41,7 +41,7 @@ public class State<P:StateDelegate> {
     private var _state : P.StateType! {
         
         didSet {
-            dispatch_sync(dispatch_get_main_queue()) {
+            dispatch_async(dispatch_get_main_queue()) {
                 self.delegate.didTransitionFrom(oldValue, to: self._state)
             }
         }
@@ -60,7 +60,7 @@ public class State<P:StateDelegate> {
                 }
             }
             else {
-                dispatch_sync(dispatch_get_main_queue()) {
+                dispatch_async(dispatch_get_main_queue()) {
                     self.delegate.failedTransitionFrom(self._state, to: newValue)
                 }
             }
@@ -74,7 +74,8 @@ public class State<P:StateDelegate> {
         self.delegate = delegate
         _state = initialState //set the primitive to avoid calling the delegate.
         
-        self.queue = dispatch_queue_create(lockingQueueName, nil)
+        self.queue = dispatch_queue_create(lockingQueueName, DISPATCH_QUEUE_SERIAL)
+
     }
 }
 
