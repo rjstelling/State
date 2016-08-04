@@ -16,7 +16,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2AB1443F1BC4090C00D1071B"
                BuildableName = "State.framework"
-               BlueprintName = "State"
+               BlueprintName = "State iOS"
                ReferencedContainer = "container:State.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,7 +45,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2AB1443F1BC4090C00D1071B"
             BuildableName = "State.framework"
-            BlueprintName = "State"
+            BlueprintName = "State iOS"
             ReferencedContainer = "container:State.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -67,7 +67,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2AB1443F1BC4090C00D1071B"
             BuildableName = "State.framework"
-            BlueprintName = "State"
+            BlueprintName = "State iOS"
             ReferencedContainer = "container:State.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -85,7 +85,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2AB1443F1BC4090C00D1071B"
             BuildableName = "State.framework"
-            BlueprintName = "State"
+            BlueprintName = "State iOS"
             ReferencedContainer = "container:State.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
